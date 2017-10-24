@@ -6,17 +6,19 @@ import os
 from settings import team
 
 base_igem = 'http://2017.igem.org/'
-base_team = base_igem + 'Team:' + team +'/'
-base_template = base_igem + 'Template:' + team + '/'
+base_team = base_igem + 'Team:Bristol/'
+base_template = base_igem + 'Template:Bristol/'
 base_raw = '?action=raw&ctype=text/'
 
-extensions = ['.png', '.svg', '.gif', '.jpeg', '.jpg', '.bmp']
+extensions = ['.png', '.svg', '.gif', '.jpeg', '.jpg', '.bmp', '.ini']
 
 
 def get_pages():
     pages = []
-    for file in glob.glob('html/**/*.*', recursive=True):
-        pages.append(file[5:])
+    for file_name in glob.glob('html/**/*.*', recursive=True):
+        if os.name == 'nt':
+            file_name = file_name.replace('\\', '/')
+        pages.append(file_name[5:])
     return pages
 
 
