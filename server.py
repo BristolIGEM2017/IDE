@@ -10,7 +10,7 @@ import urllib.request as request
 from template import get_page
 
 team_pages = {}
-host = "2017.igem.org"
+host = "2018.igem.org"
 base_domain = "http://" + host + "/"
 
 

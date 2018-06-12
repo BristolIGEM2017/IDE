@@ -16,7 +16,7 @@
 
 /**************************************************************** MENU ***************************************************************/
 	/* Wrapper for the menu */
-	.igem_2017_menu_wrapper {
+	.igem_2018_menu_wrapper {
 		width: 15%;
 		height:100vh;
 		position:fixed;
@@ -32,24 +32,24 @@
 	}
 
 	/* this hides the scrollbar to keep view consistency */
-	.igem_2017_menu_wrappe::-webkit-scrollbar {
+	.igem_2018_menu_wrappe::-webkit-scrollbar {
 		display: none;
 	}
 
 
 	/* styling for links in the menu, removes the line under text */
-	.igem_2017_menu_wrapper a {
+	.igem_2018_menu_wrapper a {
 		text-decoration: none;
 	}
 
 
 	/* styling for the images in the menu */
-	.igem_2017_menu_wrapper img {
+	.igem_2018_menu_wrapper img {
 		width: 100%;
 	}
 
 	/* styling for the menu buttons */
-	.igem_2017_menu_wrapper .menu_button {
+	.igem_2018_menu_wrapper .menu_button {
 		width: 100%;
 		padding: 10px 0px 10px 15px;
 		float:left;
@@ -61,7 +61,7 @@
 	}
 
 
-	.igem_2017_menu_wrapper .menu_bottom_padding {
+	.igem_2018_menu_wrapper .menu_bottom_padding {
 		width: 100%;
 		height: 30px;
 		float:left;
@@ -72,12 +72,12 @@
 	}
 
 
-	.igem_2017_menu_wrapper .menu_button .expand_collapse_icon {
+	.igem_2018_menu_wrapper .menu_button .expand_collapse_icon {
 		width:10%;
 		float:left;
 	}
 
-	.igem_2017_menu_wrapper .menu_button .expand_collapse_icon::before {
+	.igem_2018_menu_wrapper .menu_button .expand_collapse_icon::before {
 		content: "+";
 	}
 
@@ -88,7 +88,7 @@
 
 
 	/* styling for the menu buttons on hover */
-	.igem_2017_menu_wrapper .menu_button:hover, .igem_2017_menu_wrapper .submenu_button:hover ,  .submenu_button.current_page:hover {
+	.igem_2018_menu_wrapper .menu_button:hover, .igem_2018_menu_wrapper .submenu_button:hover ,  .submenu_button.current_page:hover {
 		background-color: #3399ff;
 		text-decoration: none;
 		color:#ffffff;
@@ -102,7 +102,7 @@
 
 
 	/* styling for the submenu buttons */
-	.igem_2017_menu_wrapper .submenu_button {
+	.igem_2018_menu_wrapper .submenu_button {
 		width: 100%;
 		padding: 10px 0px 10px 34px;
 		float:left;
@@ -114,12 +114,12 @@
 	}
 
 	/* wrapper for the submenu items, they are hidden by default*/
-	.igem_2017_menu_wrapper .submenu_wrapper {
+	.igem_2018_menu_wrapper .submenu_wrapper {
 		display:none;
 	}
 
 	/* when the page size is bigger than 800px, this show/hide control is hidden by default */
-	.igem_2017_menu_wrapper #display_menu_control {
+	.igem_2018_menu_wrapper #display_menu_control {
 		display:none;
 		text-align:center;
 	}
@@ -128,7 +128,7 @@
 /***************************************************** CONTENT OF THE PAGE ****************************************************/
 
 	/* Wrapper for the content */
-	.igem_2017_content_wrapper {
+	.igem_2018_content_wrapper {
 		width: 81%;
 		margin: 2%;
 		display:block;
@@ -141,7 +141,7 @@
 /********************************* HTML STYLING  *********************************/
 
 	/* styling for the titles h1 h2 */
-	.igem_2017_content_wrapper h1, .igem_2017_content_wrapper h2 {
+	.igem_2018_content_wrapper h1, .igem_2018_content_wrapper h2 {
 		padding:5px 15px;
 		border-bottom: 0px;
 		color: #3399ff;
@@ -149,7 +149,7 @@
 
 
 	/* styling for the titles  h3 h4 h5 h6*/
-	.igem_2017_content_wrapper h3, .igem_2017_content_wrapper h4, .igem_2017_content_wrapper h5, .igem_2017_content_wrapper h6 {
+	.igem_2018_content_wrapper h3, .igem_2018_content_wrapper h4, .igem_2018_content_wrapper h5, .igem_2018_content_wrapper h6 {
 		padding:5px 15px;
 		border-bottom:0px;
 		color: #000000;
@@ -157,13 +157,13 @@
 
 
 	/* font and text */
-	.igem_2017_content_wrapper p {
+	.igem_2018_content_wrapper p {
 		padding: 0px 15px;
 		font-size: 13px;
 	}
 
 	/* Links */
-	.igem_2017_content_wrapper a {
+	.igem_2018_content_wrapper a {
 		font-weight: bold;
 		text-decoration: underline;
 		text-decoration-color: #3399ff;
@@ -176,27 +176,27 @@
 	}
 
 	/* hover for the links */
-	.igem_2017_content_wrapper a:hover {
+	.igem_2018_content_wrapper a:hover {
 		text-decoration:none;
 		color:#000000;
 	}
 
 	/* non numbered lists */
-	.igem_2017_content_wrapper ul {
+	.igem_2018_content_wrapper ul {
 		padding:0px 20px;
 		font-size: 13px;
 		font-family:Tahoma, Geneva, sans-serif;
 	}
 
 	/* numbered lists */
-	.igem_2017_content_wrapper ol {
+	.igem_2018_content_wrapper ol {
 		padding:0px;
 		font-size: 13px;
 		font-family:Tahoma, Geneva, sans-serif;
 	}
 
 	/* Table */
-	.igem_2017_content_wrapper table {
+	.igem_2018_content_wrapper table {
 		width: 97%;
 		margin:15px 10px;
 		border: 1px solid #d3d3d3;
@@ -204,7 +204,7 @@
 	}
 
 	/* table cells */
-	.igem_2017_content_wrapper  td {
+	.igem_2018_content_wrapper  td {
 		padding: 10px;
 		vertical-align: text-top;
 		border: 1px solid #d3d3d3;
@@ -212,7 +212,7 @@
 	}
 
 	/* table headers */
-	.igem_2017_content_wrapper th {
+	.igem_2018_content_wrapper th {
 		padding: 10px;
 		vertical-align: text-top;
 		border: 1px solid #d3d3d3;
@@ -224,7 +224,7 @@
 /**********************************LAYOUT CLASSES **********************************/
 
 	/* general class for column divs */
-	.igem_2017_content_wrapper .column  {
+	.igem_2018_content_wrapper .column  {
 		padding: 10px 0px;
 		float:left;
 	}
@@ -256,42 +256,42 @@
 /********************************* SUPPORT CLASSES ********************************/
 
 	/* class that clears content below*/
-	.igem_2017_content_wrapper .clear {
+	.igem_2018_content_wrapper .clear {
 		clear:both;
 	}
 
 
 	/* adds extra spacing when clearing content */
-	.igem_2017_content_wrapper  .clear.extra_space {
+	.igem_2018_content_wrapper  .clear.extra_space {
 		height: 30px;
 	}
 
 
 	/* highlight class, makes content slightly smaller */
-	.igem_2017_content_wrapper .highlight {
+	.igem_2018_content_wrapper .highlight {
 		margin: 0px 15px;
 		padding: 15px 0px;
 	}
 
 
 	/* highlight class, adds a gray background */
-	.igem_2017_content_wrapper .highlight.gray {
+	.igem_2018_content_wrapper .highlight.gray {
 		background-color: #f2f2f2;
 	}
 
 	/* highlight with decoration blue line on top */
-	.igem_2017_content_wrapper .highlight.blue_top {
+	.igem_2018_content_wrapper .highlight.blue_top {
     	border-top: 4px solid #3399ff;
 	}
 
 	/* highlight with a full blue border decoration */
-	.igem_2017_content_wrapper .highlight.blue_border {
+	.igem_2018_content_wrapper .highlight.blue_border {
     	border: 4px solid  #3399ff;
 	}
 
 
 	/* button class */
-	.igem_2017_content_wrapper .button{
+	.igem_2018_content_wrapper .button{
 		max-width: 35%;
  		margin: 30px auto;
 		padding: 12px 10px;
@@ -305,7 +305,7 @@
 	}
 
 	/* styling for button on hover */
-	.igem_2017_content_wrapper .button:hover{
+	.igem_2018_content_wrapper .button:hover{
 		background-color: #3399ff;
     	color: #000000;
 	}
@@ -319,9 +319,9 @@
 	@media only screen and (max-width: 1200px) {
 
 		#content {width:100%; }
-		.igem_2017_menu_wrapper {width:15%; right:0;}
+		.igem_2018_menu_wrapper {width:15%; right:0;}
 		.highlight {padding:10px 0px;}
-		.igem_2017_menu_wrapper #display_menu_control { display:none; }
+		.igem_2018_menu_wrapper #display_menu_control { display:none; }
 		#menu_content { display:block;}
 		.menu_button.direct_to_page {padding-left: 17px;}
 
@@ -330,14 +330,14 @@
 	/* IF THE SCREEN IS LESS THAN 800PX */
 	@media only screen and (max-width: 800px) {
 
- 		.igem_2017_menu_wrapper { width:100%; height: 15%; position:relative; left:0%;}
-		.igem_2017_content_wrapper {width:100%; margin-left:0px;}
+ 		.igem_2018_menu_wrapper { width:100%; height: 15%; position:relative; left:0%;}
+		.igem_2018_content_wrapper {width:100%; margin-left:0px;}
 		.column.half_size  {width:100%; }
 		.column.full_size img, .column.half_size img {  width: 100%; padding: 10px 0px;}
 		.highlight {padding:15px 5px;}
-		.igem_2017_menu_wrapper #display_menu_control { display:block; }
+		.igem_2018_menu_wrapper #display_menu_control { display:block; }
 		#menu_content { display:none;}
-		.igem_2017_menu_wrapper .menu_button .expand_collapse_icon { width: 5%; }
+		.igem_2018_menu_wrapper .menu_button .expand_collapse_icon { width: 5%; }
 		.menu_bottom_padding {display:none;}
 		.menu_button.direct_to_page { padding-left: 36px; }
 	}
