@@ -11,8 +11,8 @@ import urllib.request as request
 from template import get_page
 
 team_pages = {}
-host = "org"
-served_at = "localhost:8000"
+host = "igem.org"
+served_at = "igem.localhost:8000"
 
 port = served_at.split(':')
 if len(port) == 1:
@@ -30,6 +30,7 @@ noredir_opener = request.build_opener(NoRedirect())
 
 
 def request_igem_file(path, sub_domain):
+    print(sub_domain, host)
     resp = request.urlopen("http://" + sub_domain + host + "/" + path)
     data = resp.read()
     data = data.replace(host.encode("utf-8"), served_at.encode("utf-8"))
@@ -57,7 +58,7 @@ class IGEMHTTPRequestHandler(server.SimpleHTTPRequestHandler):
 
     def do_GET(self):
         if self.path.startswith("/Team:"):
-            sub_domain = self.headers["host"].replace(served_at, "")
+            sub_domain = self.headers["host"].replace(served_at, "").strip()
             team = self.path[6:].split('/')[0]
             template = get_wiki_template(team, sub_domain)
             if template is None:
@@ -98,7 +99,7 @@ class IGEMHTTPRequestHandler(server.SimpleHTTPRequestHandler):
             for k, v in self.headers.items()
             if k not in ("Content-Length", "Content-Type")
         }
-        nhost = head["Host"].replace(served_at, host)
+        nhost = head["Host"].replace(served_at, host).strip()
         head["Host"] = nhost
         if "Cookie" in head:
             head["Cookie"] = head["Cookie"].replace(served_at.split(":")[0], host)
@@ -129,13 +130,19 @@ class IGEMHTTPRequestHandler(server.SimpleHTTPRequestHandler):
                 if k == "Set-Cookie":
                     v = v.replace(":" + port, "")
                 self.send_header(k, v)
+        body = b''
+        next_body = resp.read()
+        while len(next_body) > 0:
+            body += next_body
+            next_body = resp.read()
+        body = body.replace(
+            host.encode('utf-8'),
+            served_at.encode('utf-8')
+        ).replace(b"https", b"http")
         self.end_headers()
-        self.wfile.write(
-            resp.read().replace(
-                host.encode('utf-8'),
-                served_at.encode('utf-8')
-            ).replace(b"https", b"http")
-        )
+        while len(body) > 0:
+            count = self.wfile.write(body)
+            body = body[count:]
 
 class ThreadSocketServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     pass
