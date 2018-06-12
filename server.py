@@ -8,24 +8,25 @@ import urllib
 import urllib.request as request
 
 from template import get_page
+from settings import year
 
 team_pages = {}
-host = "2017.igem.org"
-base_domain = "http://" + host + "/"
+host = year + '.igem.org'
+base_domain = 'http://' + host + '/'
 
 
 def request_igem_file(path):
     resp = request.urlopen(base_domain + path)
     data = resp.read()
-    data = data.replace(base_domain.encode('utf-8'), b"/")
+    data = data.replace(base_domain.encode('utf-8'), b'/')
     return data, resp
 
 
 def get_wiki_template(team):
     if team not in team_pages:
         try:
-            data = re.split(r"<p>\W*IDE\W*</p>", request_igem_file(
-                "Team:" + team + "/IDE"
+            data = re.split(r'<p>\W*IDE\W*</p>', request_igem_file(
+                'Template:' + team + '/IDE'
             )[0].decode('utf-8'))
             if len(data) != 2:
                 return None
@@ -40,13 +41,13 @@ class IGEMHTTPRequestHandler(server.SimpleHTTPRequestHandler):
         super().__init__(*args, **kwargs)
 
     def do_GET(self):
-        if self.path.startswith("/Team:"):
+        if self.path.startswith('/Team:'):
             template = get_wiki_template(self.path[6:].split('/')[0])
             if template is None:
                 self.send_response(404)
                 self.end_headers()
                 self.wfile.write(
-                    "Please create an IDE template".encode('utf-8'))
+                    'Please create an IDE template'.encode('utf-8'))
                 return
             self.send_response(200)
             self.end_headers()
@@ -57,15 +58,15 @@ class IGEMHTTPRequestHandler(server.SimpleHTTPRequestHandler):
                 page = '/' + page[1]
             template_head = template[0].replace('/IDE', page)
             template_foot = template[1].replace('/IDE', page)
-            if page == "":
-                page = "/"
+            if page == '':
+                page = '/'
             if page.endswith('/'):
-                page += "index"
+                page += 'index'
             self.wfile.write(template_head.encode('utf-8'))
             try:
                 self.wfile.write(get_page(page).encode('utf-8'))
             except Exception as e:
-                self.wfile.write(("Error:<br />" + str(e)).encode('utf-8'))
+                self.wfile.write(('Error:<br />' + str(e)).encode('utf-8'))
             self.wfile.write(template_foot.encode('utf-8'))
             return
         return self.proxy_upstream()
@@ -76,10 +77,10 @@ class IGEMHTTPRequestHandler(server.SimpleHTTPRequestHandler):
 
     def proxy_upstream(self):
         head = self.headers
-        head["Host"] = host
-        del head["Origin"]
+        head['Host'] = host
+        del head['Origin']
         data = None
-        if self.command == "POST":
+        if self.command == 'POST':
             data = self.rfile.read(int(self.headers['Content-Length']))
         req = request.Request(base_domain + self.path[1:],
                               data=data,
@@ -89,7 +90,7 @@ class IGEMHTTPRequestHandler(server.SimpleHTTPRequestHandler):
             with request.urlopen(req) as resp:
                 self.send_response(resp.status)
                 for k, v in dict(resp.info()).items():
-                    if k not in ["Transfer-Encoding"]:
+                    if k not in ['Transfer-Encoding']:
                         self.send_header(k, v)
                 self.end_headers()
                 self.wfile.write(
@@ -104,19 +105,19 @@ class ThreadSocketServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
     pass
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     Handler = IGEMHTTPRequestHandler
     stop = False
     while not stop:
         try:
-            server = ThreadSocketServer(("0.0.0.0", 8000), Handler)
+            server = ThreadSocketServer(('0.0.0.0', 8000), Handler)
         except OSError as e:
             if e.errno != 98:
                 raise
-            print("Failed to listen, waiting 10 seconds")
+            print('Failed to listen, waiting 10 seconds')
             time.sleep(10)
         else:
-            print("Now listening")
+            print('Now listening')
             stop = True
             server.allow_reuse_address = True
             server.serve_forever()

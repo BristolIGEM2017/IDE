@@ -3,11 +3,11 @@ import glob
 import io
 import re
 import os
-from settings import team
+from settings import team, year
 
-base_igem = 'http://2017.igem.org/'
-base_team = base_igem + 'Team:Bristol/'
-base_template = base_igem + 'Template:Bristol/'
+base_igem = 'http://' + year + '.igem.org/'
+base_team = base_igem + 'Team:' + team + '/'
+base_template = base_igem + 'Template:' + team + '/'
 base_raw = '?action=raw&ctype=text/'
 
 extensions = ['.png', '.svg', '.gif', '.jpeg', '.jpg', '.bmp', '.ini']

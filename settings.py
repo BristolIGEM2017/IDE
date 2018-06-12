@@ -1,1 +1,2 @@
-team = 'Bristol'
+team = 'TeamName'
+year = '2017'
