@@ -10,13 +10,13 @@ If you are using IDE to help develop your Wiki please accredit the Bristol iGEM 
 
 In order to use IDE you will need python3 installed.
 
-Firstly edit the file `settings.py` and enter your team_name as shown exactly on the iGEM wiki url to set up IDE to work with your team name.
+Firstly edit the file `settings.py` and enter your team name as shown exactly on the iGEM wiki url to set up IDE to work with your team name.
 
-Secondly create an IDE page at `2017.igem.org/Team:TeamName/IDE` by editing the wiki page and inserting only "IDE" as shown below for the Bristol team.
+Secondly create an IDE page at `2018.igem.org/Template:TeamName/IDE` by editing the wiki page and inserting only "IDE" as shown below for the Bristol team.
 
 ![](http://imgur.com/TQoEdXQ.png)
 
-Then run `python3 server.py` and go to `localhost:8000/Team:TeamName` in your browser. You
+Then using your computers command line, run `python3 server.py` and go to `localhost:8000/Team:TeamName` in your browser. You
  should then see the original iGEM wiki template for Bristol.
 
 ## Editing
@@ -59,10 +59,10 @@ Simply run `python3 build.py`. The output will be written into the `dist/`
 folder and the file directories correspond the to URLs they need to be uploaded
 to on the iGEM website.
 
-* css - All files under the css folder need to be uploaded to `"2017.igem.org/Template:TeamName/css/filepath"`.
-* js - All files under the js folder need to be uploaded to `"2017.igem.org/Template:TeamName/js/filepath"`.
-* templates - All files under the templates folder need to be uploaded to `"2017.igem.org/Template:TeamName/filepath"`.
-* Everything else must be uploaded to the `"2017.igem.org/Team:TeamName/filepath"` however, for `index.html` you must remove `/index` from the filepath.
+* css - All files under the css folder need to be uploaded to `"2018.igem.org/Template:TeamName/css/filepath"`.
+* js - All files under the js folder need to be uploaded to `"2018.igem.org/Template:TeamName/js/filepath"`.
+* templates - All files under the templates folder need to be uploaded to `"2018.igem.org/Template:TeamName/filepath"`.
+* Everything else must be uploaded to the `"2018.igem.org/Team:TeamName/filepath"` however, for `index.html` you must remove `/index` from the filepath.
 
 
 ## Creators
