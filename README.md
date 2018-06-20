@@ -4,11 +4,11 @@ The iGEM Development Environment (IDE).
 
 IDE is a useful tool to allow local development for iGEM wiki users.
 
-If you are using IDE to help develop your Wiki please accredit the Bristol iGEM Team visibly on your collaboration page.
+If you are using IDE to help develop your Wiki please accredit the Bristol iGEM Team visibly on your collaboration page. The IDE was updated by iGEM Team Aachen for 2018.
 
 ## Setup
 
-In order to use IDE you will need python3 installed.
+In order to use IDE you will need python3 installed. It can be downloaded here https://www.python.org/downloads/.
 
 Firstly edit the file `settings.py` and enter your team_name as shown exactly on the iGEM wiki url to set up IDE to work with your team name.
 
@@ -16,8 +16,10 @@ Secondly create an IDE page at `2017.igem.org/Team:TeamName/IDE` by editing the 
 
 ![](http://imgur.com/TQoEdXQ.png)
 
-Then run `python3 server.py` and go to `localhost:8000/Team:TeamName` in your browser. You
- should then see the original iGEM wiki template for Bristol.
+Then run `python3 server.py`. For this open the command line in windows.
+
+Then go to `localhost:8000/Team:TeamName` in your browser. You should then see the original iGEM wiki template for Bristol.
+
 
 ## Editing
 
@@ -28,7 +30,7 @@ There are currently three sub-folders of importance:
  * css - This folder is where all your CSS should be stored. If you are planning
    on using Bootstrap 4, we have a customised version to increase compatibility
    with the iGEM wiki that can be found.
-   [here](https://github.com/BristolIGEM2017/bootstrapIGEM). CSS can be
+   [here](https://github.com/BristolIGEM2017/bootstrapIGEM ). CSS can be
    included with the `{{css/style}}` tag to include `style.css`.
  * js - This folder should contain all of your JavaScript files. JavaScript can
    be included with the `{{js/script}}` tag to include `script.js`
@@ -64,6 +66,8 @@ to on the iGEM website.
 * templates - All files under the templates folder need to be uploaded to `"2017.igem.org/Template:TeamName/filepath"`.
 * Everything else must be uploaded to the `"2017.igem.org/Team:TeamName/filepath"` however, for `index.html` you must remove `/index` from the filepath.
 
+## Future
+To be able to use this IDE in the fututre you just need to edit the python files and replace the 2018 references with 2019 (or any other year).
 
 ## Creators
 

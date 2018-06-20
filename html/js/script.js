@@ -54,7 +54,7 @@
 
 			// in case you preview mode is selected, the menu is hidden for better visibility
 			if (window.location.href.indexOf("submit") >= 0) {
-				$(".igem_2017_menu_wrapper").hide();
+				$(".igem_2018_menu_wrapper").hide();
 			}
 
 			// if the black menu bar has been loaded
@@ -65,7 +65,7 @@
 					$("#sideMenu").hide();
 
 					// show/hide the menu wrapper
-					$(".igem_2017_menu_wrapper").fadeToggle("100");
+					$(".igem_2018_menu_wrapper").fadeToggle("100");
 				});
   			}
 

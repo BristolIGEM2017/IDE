@@ -5,9 +5,9 @@ import re
 import os
 from settings import team
 
-base_igem = 'http://2017.igem.org/'
-base_team = base_igem + 'Team:Bristol/'
-base_template = base_igem + 'Template:Bristol/'
+base_igem = 'http://2018.igem.org/'
+base_team = base_igem + 'Team:Aachen/'
+base_template = base_igem + 'Template:Aachen/'
 base_raw = '?action=raw&ctype=text/'
 
 extensions = ['.png', '.svg', '.gif', '.jpeg', '.jpg', '.bmp', '.ini']
