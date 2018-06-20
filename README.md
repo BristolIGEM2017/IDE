@@ -30,7 +30,7 @@ There are currently three sub-folders of importance:
  * css - This folder is where all your CSS should be stored. If you are planning
    on using Bootstrap 4, we have a customised version to increase compatibility
    with the iGEM wiki that can be found.
-   [here](https://github.com/BristolIGEM2017/bootstrapIGEM). CSS can be
+   [here](https://github.com/BristolIGEM2017/bootstrapIGEM ). CSS can be
    included with the `{{css/style}}` tag to include `style.css`.
  * js - This folder should contain all of your JavaScript files. JavaScript can
    be included with the `{{js/script}}` tag to include `script.js`
